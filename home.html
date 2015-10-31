@@ -1,0 +1,16 @@
+<html>
+<head>
+	<h3>Time clock</h3>
+</head>
+<body>
+	{% if user %}
+		<p>Welcome master {{user.email()}}</p>
+		<p> Click here to <a href={{logout_url}}>Sign Out</a></p>
+	{% else %}
+		<p>Welcome</p>
+		<p> Click here to <a href={{login_url}}>Sign in</a> and customize</p>
+	{% endif %}
+	<p>The time is {{current_time}}</p>
+
+</body>
+</html>
